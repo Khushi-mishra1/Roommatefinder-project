@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register | Roommate Finder</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadTheme()">
+
+<h1>Join Roommate Finder 💜</h1>
+
+<div class="card">
+
+    <!-- SIGN UP -->
+    <h2>Sign Up</h2>
+
+    <input type="text" id="fullName" placeholder="Full Name"><br>
+    <input type="text" id="contact" placeholder="Email or Phone"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+
+    <button onclick="register()">Sign Up</button>
+
+    <!-- OR LINE -->
+    <div class="or">OR</div>
+
+    <!-- LOGIN -->
+    <h2>Login</h2>
+
+    <input type="text" id="loginContact" placeholder="Email or Phone"><br>
+    <input type="password" id="loginPass" placeholder="Password"><br>
+
+    <button onclick="login()">Login</button>
+
+</div>
+
+<br>
+<button onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
