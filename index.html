@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PG Listings</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadTheme(); loadPG()">
+
+<h1>Available PGs 🏠</h1>
+
+<div class="profile-container">
+
+    <div style="text-align:center;">
+        <button class="main-btn" onclick="goToProfile()">👤 My Profile</button>
+    </div>
+
+    
+
+    <!-- ADD PG -->
+    <div class="card">
+        <h3>Add New PG</h3>
+
+        <div class="input-group">
+            <input type="text" id="pgName" required placeholder=" ">
+            <label>PG Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="pgLocation" required placeholder=" ">
+            <label>Location</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="pgAddress" required placeholder=" ">
+            <label>Full Address</label>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="pgRent" required placeholder=" ">
+            <label>Rent (₹)</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="pgContact" required placeholder=" ">
+            <label>Owner Contact Number</label>
+        </div>
+
+        <select id="pgSharing">
+            <option value="Single">Single</option>
+            <option value="Double">Double Sharing</option>
+            <option value="Triple">Triple Sharing</option>
+        </select>
+
+        <select id="pgGender">
+            <option value="Any">Any</option>
+            <option value="Boys">Boys</option>
+            <option value="Girls">Girls</option>
+        </select>
+
+        <div class="input-group">
+            <input type="text" id="pgImages" required placeholder=" ">
+            <label>Image URLs (comma separated)</label>
+        </div>
+
+        <button class="main-btn" onclick="addPG()">Add PG</button>
+    </div>
+
+    <div style="text-align:center;">
+        <button onclick="testFirebase()">🧪 Test Firebase</button>
+    </div>
+
+    <!-- ONE SEARCH BOX ONLY -->
+    <div class="card filter-box">
+        <h3>Search & Filters</h3>
+        <input type="text" id="search" placeholder="🔍 Search by name, location, address, gender, sharing or rent..." onkeyup="searchAndFilterPG()">
+    </div>
+
+    <!-- PG LIST -->
+    <div id="pgList"></div>
+
+</div>
+
+<br>
+
+<div style="text-align:center;">
+    <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
