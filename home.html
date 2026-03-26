@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Finder</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadTheme()">
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Roommate Finder 💜</h2>
+    <button onclick="toggleTheme()">🌙</button>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Find Your Perfect <span id="typing"></span></h1>
+    <p>PG • Roommate • Comfort • Lifestyle</p>
+
+    <button class="main-btn" onclick="goToRegister()">Get Started</button>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="card">
+        <h3>🏠 PG Listings</h3>
+        <p>Browse available PGs near you</p>
+    </div>
+
+    <div class="card">
+        <h3>🔍 Smart Search</h3>
+        <p>Filter by budget, location & preferences</p>
+    </div>
+
+    <div class="card">
+        <h3>💬 Chat System</h3>
+        <p>Connect with potential roommates instantly</p>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
