@@ -1,4 +1,0 @@
-# Roommatefinder-project
-This project is a web-based application designed to help users find suitable Paying Guest (PG) accommodations and compatible roommates. Users can register, create and manage their profiles, and specify their accommodation and roommate preferences. The platform allows users to browse PG listings, apply search and filtering options, and view detailed information about each PG including rent, location, facilities, and owner details.
-
-The system also provides a real-time chat feature that enables users to communicate directly with PG owners within each listing. Additionally, users can contact the owner instantly through a “Call Now” option. The application uses Firebase for storing PG data and enabling dynamic updates, making the system interactive and user-friendly.
