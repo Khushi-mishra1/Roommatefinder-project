@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile | Roommate Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadTheme(); loadSavedProfile()">
+    <h1>My Profile 💜</h1>
+
+    <div class="profile-container">
+
+        <div class="card">
+            <h2>Basic Information</h2>
+
+            <label for="profilePic">Profile Picture</label><br><br>
+            <input type="file" id="profilePic" accept="image/*"><br><br>
+
+            <img id="preview" class="profile-img" alt="Profile Preview"><br><br>
+
+            <div class="input-group">
+                <input type="text" id="name" required placeholder=" ">
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="age" required placeholder=" ">
+                <label>Age</label>
+            </div>
+
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+
+            <div class="input-group">
+                <input type="text" id="phone" required placeholder=" ">
+                <label>Phone Number</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label>Email</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Accommodation Preferences</h2>
+
+            <div class="input-group">
+                <input type="text" id="location" required placeholder=" ">
+                <label>Preferred Location</label>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="minRent" required placeholder=" ">
+                <label>Min Rent</label>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="maxRent" required placeholder=" ">
+                <label>Max Rent</label>
+            </div>
+
+            <select id="roomType">
+                <option value="Single">Single</option>
+                <option value="2 Sharing">2 Sharing</option>
+                <option value="3 Sharing">3 Sharing</option>
+                <option value="4 Sharing">4 Sharing</option>
+            </select>
+        </div>
+
+        <div class="card">
+            <h2>Roommate Preferences</h2>
+
+            <select id="prefGender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Any">Any</option>
+            </select><br><br>
+
+            <div class="input-group">
+                <input type="text" id="ageRange" required placeholder=" ">
+                <label>Age Range (18-30)</label>
+            </div>
+
+            <select id="smoking">
+                <option value="No">Smoking: No</option>
+                <option value="Yes">Smoking: Yes</option>
+            </select><br><br>
+
+            <select id="drinking">
+                <option value="No">Drinking: No</option>
+                <option value="Yes">Drinking: Yes</option>
+            </select><br><br>
+
+            <select id="food">
+                <option value="Veg">Veg</option>
+                <option value="Non-Veg">Non-Veg</option>
+                <option value="Both">Both</option>
+            </select><br><br>
+
+            <select id="sleep">
+                <option value="Early Bird">Early Bird</option>
+                <option value="Night Owl">Night Owl</option>
+            </select>
+        </div>
+
+        <div class="card">
+            <h2>Personal Details</h2>
+
+            <select id="occupation">
+                <option value="Student">Student</option>
+                <option value="Working Professional">Working Professional</option>
+            </select><br><br>
+
+            <div class="input-group">
+                <input type="text" id="company" required placeholder=" ">
+                <label>College / Company</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="lifestyle" required placeholder=" ">
+                <label>Lifestyle (Clean, Social, etc.)</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="currentLocation" required placeholder=" ">
+                <label>Current Location</label>
+            </div>
+
+            <button class="center-btn" type="button" onclick="openMap()">📍 Choose from Map</button>
+
+            <div id="mapContainer"></div><br><br>
+
+            <select id="idProof">
+                <option value="Aadhar">Aadhar</option>
+                <option value="College ID">College ID</option>
+                <option value="Office ID">Office ID</option>
+            </select><br><br>
+
+            <div class="input-group">
+                <textarea id="about" required placeholder=" "></textarea>
+                <label>About Me</label>
+            </div>
+        </div>
+
+        <button class="main-btn" onclick="saveProfile()">Save Profile</button>
+        <button class="center-btn" onclick="goToHome()">🏠 View PG Listings</button>
+        <button class="center-btn" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+    </div>
+
+    <!-- Firebase FIRST -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+    <!-- Google Maps -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKtUMdOcZF7oCQnvb1mJcU7ImPGQ65XcU"></script>
+
+    <!-- Your script LAST -->
+    <script src="script.js"></script>
+</body>
+</html>
